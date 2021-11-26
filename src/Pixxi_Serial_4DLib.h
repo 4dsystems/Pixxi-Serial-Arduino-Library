@@ -2,8 +2,7 @@
 	Arduino Library for 4D Systems Serial Environement for Pixxi
 	Pixxi_Serial_4DLib.h
 */
- 
-#ifndef Pixxi_Serial_4DLib_h
+
 #define Pixxi_Serial_4DLib_h
  
 #if (ARDUINO >= 100)
@@ -147,7 +146,7 @@ class Pixxi_Serial_4DLib
 		word pin_LO(word Pin);
 		word pin_Read(word Pin);
 		word pin_Set(word Mode, word Pin);
-        void putCH(word  WordChar);
+                void putCH(word  WordChar);
 		void pokeM(word  Address, word  WordValue) ;
 		word putstr(char *  InString);
 		//---------------------print----------------------/
@@ -166,7 +165,7 @@ class Pixxi_Serial_4DLib
 		void println(const __FlashStringHelper *);
 		void println(const String &);
 		void println(const char[]);
-	    void println(char);
+	        void println(char);
 		void println(unsigned char, int = DEC);
 		void println(int, int = DEC);
 		void println(unsigned int, int = DEC);
@@ -239,7 +238,7 @@ class Pixxi_Serial_4DLib
 		int Error4D;  				// Error indicator,  used and set by Intrinsic routines
 		unsigned char Error4D_Inv;	// Error byte returned from com port, onl set if error = Err_Invalid
 	//	int Error_Abort4D;  		// if true routines will abort when detecting an error
-		unsigned long TimeLimit4D = 2000;	// time limit in ms for total serial command duration, 2000 (2 seconds) should be adequate for most commands
+		unsigned int TimeLimit4D;	// time limit in ms for total serial command duration, 2000 (2 seconds) should be adequate for most commands
 									// assuming a reasonable baud rate AND low latency AND 0 for the Serial Delay Parameter
 									// temporary increase might be required for very long (bitmap write, large image file opens)
 									// or indeterminate (eg file_exec, file_run, file_callFunction) commands
@@ -265,5 +264,5 @@ class Pixxi_Serial_4DLib
 		void printNumber(unsigned long, uint8_t);
 		void printFloat(double number, uint8_t digits);
 };
- 
+int Pixxi_Serial_4DLib::TimeLimit4D=0;
 #endif
