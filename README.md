@@ -1,4 +1,4 @@
-![image](http://www.4dsystems.com.au/downloads/4DLogo.png)
+![4D Logo](./logo.jpg)
 
 Pixxi-Serial-Arduino-Library
 =============================
@@ -12,9 +12,13 @@ Please refer to the 4D Systems website, namingly the Workshop4 Product Page, for
 
 ## Installation
 
-Library should be placed in the C:\Users\(User name)\My Documents\Arduino\Libraries\ folder, or equivalent. (restart the IDE if already open)
+It is advisable to simply use the Arduino IDE's library manager to search and install Picaso Serial Arduino Library.
 
-For more information on the installation, please refer to [Installing Additional Arduino Libraries] (http://arduino.cc/en/Guide/Libraries)
+For more information on the installation, please refer to the following documentation from Arduino:
+
+- Arduino 1.x: [Installing Libraries](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)
+- Arduino 2.x: [Installing Libraries](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-installing-a-library) 
+
 
 ## Example Sketch
 
